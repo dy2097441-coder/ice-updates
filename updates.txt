@@ -4,3 +4,4 @@ ICEBERG-UPDATES 1
 update 1 0.11.1 iceberg-0.11.1.upt 236100 Fixes the extra mouse pointer left behind when moving
 update 2 0.11.2 iceberg-0.11.2.upt 238532 More reliable network: lost packets are recovered, ARP answered
 update 3 0.11.3 iceberg-0.11.3.upt 297892 Secure https: TLS 1.3 with certificate checking, no proxy needed
+update 4 0.11.4 iceberg-0.11.4.upt 300324 Faster https and downloads; browser tries https first
