@@ -1,77 +1,34 @@
 <html>
-<head>
-<title>Ice Store - apps for Iceberg OS</title>
-</head>
+<head><title>Iceberg Updates</title></head>
 <body>
+<h1>Iceberg Updates</h1>
+<p>Updates for <b>Project Iceberg N</b>. You do not need to download anything from this page:
+open <b>Updates</b> on the Iceberg desktop (or in the Start menu) and press <b>Check for updates</b>.</p>
 
-<center>
-<img src="banner.png" alt="Ice Store">
-<h2>Free apps for Iceberg OS</h2>
-<p>Click Download, then open the app from Files.</p>
-</center>
-
-<hr>
-
-<h2>Apps</h2>
-
-<h3>Calculator</h3>
-<p>A calculator with clickable buttons and keyboard support: + - * / % and Del. Whole numbers only. Type with the keyboard too: digits, + - * / %, Enter for equals, c to clear.</p>
-<p>Size: 1779 bytes<br>
-<a href="calculator.app">Download calculator.app</a></p>
-
-<hr>
-
-<h3>Colors</h3>
-<p>Three coloured boxes - red, green and blue. A small example of drawing with rect and text.</p>
-<p>Size: 155 bytes<br>
-<a href="colors.app">Download colors.app</a></p>
-
-<hr>
-
-<h3>Test</h3>
-<p>The smallest possible app. It opens a window that says Hi.</p>
-<p>Size: 52 bytes<br>
-<a href="test.app">Download test.app</a></p>
-
-<hr>
-
-<h2>How to install</h2>
-<ol>
-<li>Click Download under an app. A message says it was saved in Home/Downloads.</li>
-<li>Open Files and go to Home, then Downloads.</li>
-<li>Double-click the .app file to run it. Press Esc to close it.</li>
-</ol>
-
-<h2>Make your own</h2>
-<p>An app is a plain text file ending in .app. The first line must be ICEBERG-APP 2. This one counts button clicks:</p>
-<pre>
-ICEBERG-APP 2
-title Counter
-size 200 130
-var n 0
-text 20 20 Count: {n}
-button 20 50 80 30 add Add 1
-on add
-set n n + 1
-end
-</pre>
+<h2>Released updates</h2>
 <ul>
-<li>title - the window title</li>
-<li>size - total window width and height</li>
-<li>var name number - a whole-number variable</li>
-<li>text x y words - writes words; {n} shows a value</li>
-<li>rect x y w h r g b - a filled box (colours 0 to 255)</li>
-<li>display x y w h expression - a number box</li>
-<li>button x y w h handler label - a button; use handler:5 to pass the number 5 as arg</li>
-<li>key c handler - a keyboard key (or enter, backspace) runs a handler</li>
-<li>on name ... end - a handler. Inside: set name expression, if expression / else / endif, call name</li>
+<li><b>Update 4 - version 0.11.4</b>: Faster https and downloads; browser tries https first<br>
+<a href="iceberg-0.11.4.upt">iceberg-0.11.4.upt</a> (294 KB)</li>
+<li><b>Update 3 - version 0.11.3</b>: Secure https: TLS 1.3 with certificate checking, no proxy needed<br>
+<a href="iceberg-0.11.3.upt">iceberg-0.11.3.upt</a> (291 KB)</li>
+<li><b>Update 2 - version 0.11.2</b>: More reliable network: lost packets are recovered, ARP answered<br>
+<a href="iceberg-0.11.2.upt">iceberg-0.11.2.upt</a> (233 KB)</li>
+<li><b>Update 1 - version 0.11.1</b>: Fixes the extra mouse pointer left behind when moving<br>
+<a href="iceberg-0.11.1.upt">iceberg-0.11.1.upt</a> (231 KB)</li>
 </ul>
-<p>Expressions use whole numbers, variables, ( ) + - * / % and comparisons like == != &lt; &gt; &amp;&amp; ||. A mistake shows a red message at the bottom of the app window.</p>
 
-<hr>
-<center>
-<p>Ice Store - made for Iceberg OS only</p>
-</center>
+<h2>Coming soon</h2>
+<ul>
+<li>Nothing announced.</li>
+</ul>
 
+<h2>How it works</h2>
+<ul>
+<li>Iceberg reads <a href="updates.txt">updates.txt</a> and compares it with the updates it already has.</li>
+<li>An update is a <b>.upt</b> file: a checked copy of the system. Iceberg verifies it, writes it to the disk
+and asks you to restart.</li>
+<li>Updates are installed on the hard disk, so Iceberg must be set up on a disk first (a Try It session cannot be updated).</li>
+<li>If your PC is already up to date, the Updates app says so.</li>
+</ul>
 </body>
 </html>
